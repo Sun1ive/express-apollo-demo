@@ -1,0 +1,21 @@
+module.exports = `
+  type Query {
+    user(id: ID!): User!
+    users: [User!]!
+  }
+
+  type Mutation {
+    register(email: String password: String): RegisterResponse
+  }
+
+  type User {
+    id: String
+    first_name: String
+    last_name: String
+    avatar: String
+  }
+
+  type RegisterResponse {
+    token: String
+  }
+`;
